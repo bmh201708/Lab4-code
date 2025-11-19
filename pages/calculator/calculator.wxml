@@ -1,28 +1,28 @@
 <!--pages/calculator/calculator.wxml-->
 <view>
-<input class="calResult" placeholder="计算结果" style = "text-align: right;"></input> 
+<input class="calResult" placeholder="计算结果" value = "{{result}}"style = "text-align: right;"></input> 
 </view>
 <view class="btnGroup"> 
-  <button class="number" hover-class="btnHover">7</button>
-  <button class="number" hover-class="btnHover">8</button>
-  <button class="number" hover-class="btnHover">9</button>
+  <button class="number" hover-class="btnHover" bindtap="addNum" data-num = "7">7</button>
+  <button class="number" hover-class="btnHover" bindtap="addNum" data-num = "8">8</button>
+  <button class="number" hover-class="btnHover" bindtap="addNum" data-num = "9">9</button>
   <button class="operator" hover-class="btnHover">*</button>
 </view>
 <view class="btnGroup"> 
-  <button class="number" hover-class="btnHover">4</button>
-  <button class="number" hover-class="btnHover">5</button>
-  <button class="number" hover-class="btnHover">6</button>
+  <button class="number" hover-class="btnHover" bindtap="addNum" data-num = "4">4</button>
+  <button class="number" hover-class="btnHover" bindtap="addNum" data-num = "5">5</button>
+  <button class="number" hover-class="btnHover" bindtap="addNum" data-num = "6">6</button>
   <button class="operator" hover-class="btnHover">/</button>
 </view>
 <view class="btnGroup"> 
-  <button class="number" hover-class="btnHover">1</button>
-  <button class="number" hover-class="btnHover">2</button>
-  <button class="number" hover-class="btnHover">3</button>
+  <button class="number" hover-class="btnHover" bindtap="addNum" data-num = "1">1</button>
+  <button class="number" hover-class="btnHover" bindtap="addNum" data-num = "2">2</button>
+  <button class="number" hover-class="btnHover" bindtap="addNum" data-num = "3">3</button>
   <button class="operator" hover-class="btnHover">+</button>
 </view>
 <view class="btnGroup"> 
   <button class="operator" hover-class="btnHover">C</button>
-  <button class="number" hover-class="btnHover">0</button>
+  <button class="number" hover-class="btnHover" bindtap="addNum" data-num = "0">0</button>
   <button class="operator" hover-class="btnHover">-</button>
   <button class="operator" hover-class="btnHover">/</button>
 </view>
