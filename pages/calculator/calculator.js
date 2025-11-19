@@ -25,9 +25,9 @@ Page({
 
   multiply : function(e) {
     if (this.data.NumFlag) {
-      var data = this.data.result;
+      var data = Number(this.data.result || 0);
       var lastOp = this.data.lastOp;
-      var lastResult = this.data.lastResult;
+      var lastResult = Number(this.data.lastResult || 0);
 
       switch(lastOp){
         case "+" : data = data + lastResult; break;
@@ -44,6 +44,106 @@ Page({
         lastResult : lastResult,
         lastOp : lastOp,
         NumFlag : false
+      })
+    }
+  },
+
+  plus : function(e) {
+    if (this.data.NumFlag) {
+      var data = Number(this.data.result || 0);
+      var lastOp = this.data.lastOp;
+      var lastResult = Number(this.data.lastResult || 0);
+
+      switch(lastOp){
+        case "+" : data = data + lastResult; break;
+        case "-" : data = lastResult - data; break;
+        case "*" : data = data * lastResult; break;
+        case "/" : data = lastResult / data; break;
+      }
+
+      lastResult = data;
+      lastOp = "+";
+
+      this.setData({
+        result : data,
+        lastResult : lastResult,
+        lastOp : lastOp,
+        NumFlag : false
+      })
+    }
+  },
+
+  minus : function(e) {
+    if (this.data.NumFlag) {
+      var data = Number(this.data.result || 0);
+      var lastOp = this.data.lastOp;
+      var lastResult = Number(this.data.lastResult || 0);
+
+      switch(lastOp){
+        case "+" : data = data + lastResult; break;
+        case "-" : data = lastResult - data; break;
+        case "*" : data = data * lastResult; break;
+        case "/" : data = lastResult / data; break;
+      }
+
+      lastResult = data;
+      lastOp = "-";
+
+      this.setData({
+        result : data,
+        lastResult : lastResult,
+        lastOp : lastOp,
+        NumFlag : false
+      })
+    }
+  },
+
+  divide : function(e) {
+    if (this.data.NumFlag) {
+      var data = Number(this.data.result || 0);
+      var lastOp = this.data.lastOp;
+      var lastResult = Number(this.data.lastResult || 0);
+
+      switch(lastOp){
+        case "+" : data = data + lastResult; break;
+        case "-" : data = lastResult - data; break;
+        case "*" : data = data * lastResult; break;
+        case "/" : data = lastResult / data; break;
+      }
+
+      lastResult = data;
+      lastOp = "/";
+
+      this.setData({
+        result : data,
+        lastResult : lastResult,
+        lastOp : lastOp,
+        NumFlag : false
+      })
+    }
+  },
+
+  equal : function(e) {
+    if (this.data.NumFlag) {
+      var data = Number(this.data.result || 0);
+      var lastOp = this.data.lastOp;
+      var lastResult = Number(this.data.lastResult || 0);
+
+      switch(lastOp){
+        case "+" : data = data + lastResult; break;
+        case "-" : data = lastResult - data; break;
+        case "*" : data = data * lastResult; break;
+        case "/" : data = lastResult / data; break;
+      }
+
+      lastResult = data;
+      lastOp = "";
+
+      this.setData({
+        result : data,
+        lastResult : lastResult,
+        lastOp : lastOp,
+        NumFlag : true
       })
     }
   },
