@@ -6,7 +6,7 @@
   <button class="number" hover-class="btnHover" bindtap="addNum" data-num = "7">7</button>
   <button class="number" hover-class="btnHover" bindtap="addNum" data-num = "8">8</button>
   <button class="number" hover-class="btnHover" bindtap="addNum" data-num = "9">9</button>
-  <button class="operator" hover-class="btnHover">*</button>
+  <button class="operator" hover-class="btnHover" bindtap = "multiply">*</button>
 </view>
 <view class="btnGroup"> 
   <button class="number" hover-class="btnHover" bindtap="addNum" data-num = "4">4</button>
@@ -21,8 +21,8 @@
   <button class="operator" hover-class="btnHover">+</button>
 </view>
 <view class="btnGroup"> 
-  <button class="operator" hover-class="btnHover">C</button>
+  <button class="operator" hover-class="btnHover" bindtap = "clearall">C</button>
   <button class="number" hover-class="btnHover" bindtap="addNum" data-num = "0">0</button>
   <button class="operator" hover-class="btnHover">-</button>
-  <button class="operator" hover-class="btnHover">/</button>
+  <button class="operator" hover-class="btnHover">=</button>
 </view>

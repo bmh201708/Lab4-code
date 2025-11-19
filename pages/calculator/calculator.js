@@ -6,11 +6,54 @@ Page({
    */
   data: {
     result : "",
+    lastResult : "",
+    lastOp : "" ,
+    NumFlag : true,
   },
 
   addNum : function(e){
+    if(!this.data.NumFlag) {
+      this.setData({
+        result : "",
+        NumFlag : true,
+      })
+    }
     this.setData ({
       result: this.data.result + e.currentTarget.dataset.num,
+    })
+  },
+
+  multiply : function(e) {
+    if (this.data.NumFlag) {
+      var data = this.data.result;
+      var lastOp = this.data.lastOp;
+      var lastResult = this.data.lastResult;
+
+      switch(lastOp){
+        case "+" : data = data + lastResult; break;
+        case "-" : data = lastResult - data; break;
+        case "*" : data = data * lastResult; break;
+        case "/" : data = lastResult / data; break;
+      }
+
+      lastResult = data;
+      lastOp = "*";
+
+      this.setData({
+        result : data,
+        lastResult : lastResult,
+        lastOp : lastOp,
+        NumFlag : false
+      })
+    }
+  },
+
+  clearall : function(e) {
+    this.setData({
+      result : "",
+      lastResult : "",
+      lastOp : "" ,
+      NumFlag : true,
     })
   },
   /**
