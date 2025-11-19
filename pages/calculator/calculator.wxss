@@ -1,1 +1,12 @@
 /* pages/calculator/calculator.wxss */
+.btnGroup{
+  display: flex;
+  flex-direction: row;
+}
+.btnGroup button {
+  max-width: 160rpx;
+  min-height: 150rpx;
+  border-radius: 5px;
+  margin: 10rpx;
+  line-height: 150rpx;
+}

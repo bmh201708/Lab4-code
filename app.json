@@ -10,12 +10,22 @@
     "navigationBarBackgroundColor": "#ffffff"
   },
   "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#1AAD19",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
     "list": [{
       "pagePath": "pages/index/index",
+      "iconPath": "assets/image/xiaoxi-zhihui.png",
       "text": "首页"
     }, {
       "pagePath": "pages/logs/logs",
+      "iconPath": "assets/image/rizhi.png",
       "text": "日志"
+    }, {
+      "pagePath": "pages/calculator/calculator",
+      "iconPath": "assets/image/jisuanqilishuai-xianxing-xi.png",
+      "text": "计算器"
     }]
   },
   "style": "v2",

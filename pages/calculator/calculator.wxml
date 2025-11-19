@@ -1,2 +1,28 @@
 <!--pages/calculator/calculator.wxml-->
-<text>pages/calculator/calculator.wxml</text>
+<view>
+<input class="calResult" placeholder="计算结果" style = "text-align: right;"></input> 
+</view>
+<view class="btnGroup"> 
+  <button>7</button>
+  <button>8</button>
+  <button>9</button>
+  <button>*</button>
+</view>
+<view class="btnGroup"> 
+  <button>4</button>
+  <button>5</button>
+  <button>6</button>
+  <button>/</button>
+</view>
+<view class="btnGroup"> 
+  <button>1</button>
+  <button>2</button>
+  <button>3</button>
+  <button>+</button>
+</view>
+<view class="btnGroup"> 
+  <button>C</button>
+  <button>0</button>
+  <button>-</button>
+  <button>/</button>
+</view>
